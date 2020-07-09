@@ -32,12 +32,17 @@ const App = () => {
 
 
   return (
-<Router>
-    <div>
-      <SavedList list={savedList} />
-      <div></div>
-    </div>
-</Router>
+<BrowserRouter>
+      <div>
+        <SavedList list={savedList} />
+        <Route exact path="/">
+          <MovieList movies={movieList} />
+        </Route>
+        <Route path="/movies/:id">
+          <Movie addToSavedList={addToSavedList} />
+        </Route>
+      </div>
+    </BrowserRouter>
   );
 };
 
