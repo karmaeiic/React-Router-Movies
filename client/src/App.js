@@ -36,6 +36,7 @@ const App = () => {
       <div>
         <SavedList list={savedList} />
         <Route exact path="/">
+        
           <MovieList movies={movieList} />
         </Route>
         <Route path="/movies/:id">
